@@ -58,7 +58,7 @@ namespace W3
             //Added exceptionless.io support
             ExceptionlessClient.Default.Startup(ExceptionLessAPIKey);
             string Identity = "PC" + cpuID.ProcessorId() + volumeSerial;
-            ExceptionlessClient.Default.Configuration.SetUserIdentity(Identity, "Display Name");
+            ExceptionlessClient.Default.Configuration.SetUserIdentity(Identity, Environment.MachineName);
 
 
 
